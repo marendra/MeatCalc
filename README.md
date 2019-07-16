@@ -1,2 +1,0 @@
-# MeatCalc
-Created with CodeSandbox
