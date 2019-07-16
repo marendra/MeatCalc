@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function utama() {
+export default function slotC() {
   return (
     <div>
-      <h1>Utama</h1>
+      <h1>Slot C</h1>
     </div>
   );
 }

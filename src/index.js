@@ -20,7 +20,10 @@ import Tab from "@material-ui/core/Tab";
 import { BrowserRouter, Switch, Link, Route } from "react-router-dom";
 
 import utama from "./pages/utama";
-import slotA from ".";
+import slotA from "./pages/slotA";
+import slotB from "./pages/slotB";
+import slotC from "./pages/slotC";
+import slotD from "./pages/slotD";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -61,6 +64,10 @@ function App() {
         <Container>
           <Switch>
             <Route exact path="/" component={utama} />
+            <Route exact path="/slota" component={slotA} />
+            <Route exact path="/slotB" component={slotB} />
+            <Route exact path="/slotC" component={slotC} />
+            <Route exact path="/slotD" component={slotD} />
           </Switch>
         </Container>
       </main>
@@ -74,10 +81,30 @@ function App() {
         variant="fullWidth"
       >
         <Tab label="Item One" icon={<PhoneIcon />} component={Link} to="/" />
-        <Tab label="Item Two" icon={<FavoriteIcon />} />
-        <Tab label="Item Three" icon={<PersonPinIcon />} />
-        <Tab label="Item Four" icon={<HelpIcon />} />
-        <Tab label="Item Five" icon={<ShoppingBasket />} />
+        <Tab
+          label="Item Two"
+          icon={<FavoriteIcon />}
+          component={Link}
+          to="/slota"
+        />
+        <Tab
+          label="Item Three"
+          icon={<PersonPinIcon />}
+          component={Link}
+          to="/slotB"
+        />
+        <Tab
+          label="Item Four"
+          icon={<HelpIcon />}
+          component={Link}
+          to="/slotC"
+        />
+        <Tab
+          label="Item Five"
+          icon={<ShoppingBasket />}
+          component={Link}
+          to="/slotD"
+        />
       </Tabs>
     </BrowserRouter>
   );
